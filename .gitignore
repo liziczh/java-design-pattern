@@ -21,3 +21,43 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# project init
+HELP.md
+target/
+!**/src/main/**
+!**/src/test/**
+~$*
+
+### STS ###
+.apt_generated
+**/.classpath
+**/.project
+**/.factorypath
+**/.settings
+**/.springBeans
+**/.sts4-cache
+**/.settings/*
+*/logs/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### others ###
+output
+.DS_Store
+
