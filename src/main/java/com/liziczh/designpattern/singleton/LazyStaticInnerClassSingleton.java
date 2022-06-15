@@ -1,7 +1,7 @@
 package com.liziczh.designpattern.singleton;
 
 /**
- * common
+ * 静态内部类懒加载线程安全的单例模式
  *
  * @author chenzhehao
  * @version 1.0
