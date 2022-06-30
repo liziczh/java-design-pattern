@@ -1,6 +1,6 @@
-package com.liziczh.designpattern.structural.pool;
+package com.liziczh.designpattern.zpractice.pool;
 
-import com.liziczh.designpattern.structural.pool.impl.GenericObjectPool;
+import com.liziczh.designpattern.zpractice.pool.impl.GenericObjectPool;
 
 /**
  * common

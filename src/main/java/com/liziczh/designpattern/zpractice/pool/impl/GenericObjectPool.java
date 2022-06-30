@@ -1,9 +1,9 @@
-package com.liziczh.designpattern.structural.pool.impl;
+package com.liziczh.designpattern.zpractice.pool.impl;
 
 import java.util.concurrent.LinkedBlockingDeque;
 
-import com.liziczh.designpattern.structural.pool.ObjectPool;
-import com.liziczh.designpattern.structural.pool.PooledObjectFactory;
+import com.liziczh.designpattern.zpractice.pool.ObjectPool;
+import com.liziczh.designpattern.zpractice.pool.PooledObjectFactory;
 
 /**
  * common

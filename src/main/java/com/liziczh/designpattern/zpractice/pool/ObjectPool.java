@@ -1,4 +1,4 @@
-package com.liziczh.designpattern.structural.pool;
+package com.liziczh.designpattern.zpractice.pool;
 
 /**
  * 对象池
