@@ -39,9 +39,13 @@ public class GenericObjectPool<T> implements ObjectPool<T> {
     @Override
     public T borrowObj() {
 
-        T obj = this.idleObjs.poll();
-        this.activeObjs.add(obj);
-        return obj;
+        if (this.idleObjs.size() > 0) {
+            T obj = this.idleObjs.poll();
+            this.activeObjs.add(obj);
+            return obj;
+        }
+
+        return null;
     }
 
     @Override
