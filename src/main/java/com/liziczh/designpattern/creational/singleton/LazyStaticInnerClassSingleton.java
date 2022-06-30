@@ -1,4 +1,4 @@
-package com.liziczh.designpattern.singleton;
+package com.liziczh.designpattern.creational.singleton;
 
 /**
  * 静态内部类懒加载线程安全的单例模式

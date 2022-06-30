@@ -1,9 +1,9 @@
-package com.liziczh.designpattern.chain.service;
+package com.liziczh.designpattern.behavioral.chain.service;
 
-import com.liziczh.designpattern.chain.Handler;
-import com.liziczh.designpattern.chain.handler.AHandler;
-import com.liziczh.designpattern.chain.handler.BHandler;
-import com.liziczh.designpattern.chain.handler.CHandler;
+import com.liziczh.designpattern.behavioral.chain.handler.Handler;
+import com.liziczh.designpattern.behavioral.chain.handler.impl.AHandler;
+import com.liziczh.designpattern.behavioral.chain.handler.impl.BHandler;
+import com.liziczh.designpattern.behavioral.chain.handler.impl.CHandler;
 
 /**
  * A

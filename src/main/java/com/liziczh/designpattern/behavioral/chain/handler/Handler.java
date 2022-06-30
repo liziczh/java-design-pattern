@@ -1,7 +1,8 @@
-package com.liziczh.designpattern.chain;
+package com.liziczh.designpattern.behavioral.chain.handler;
 
 /**
  * 建造者+责任链模式
+ * 应用：Filter
  *
  * @author chenzhehao
  * @version 1.0

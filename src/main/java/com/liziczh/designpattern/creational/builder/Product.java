@@ -1,4 +1,4 @@
-package com.liziczh.designpattern.builder;
+package com.liziczh.designpattern.creational.builder;
 
 /**
  * 建造者模式
@@ -8,13 +8,11 @@ package com.liziczh.designpattern.builder;
  * @description
  * @date 2022/6/15 11:20 上午
  */
-public class User {
+public class Product {
 
     private Long id;
 
     private String name;
-
-    private Integer age;
 
     public Long getId() {
         return id;
@@ -32,28 +30,19 @@ public class User {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
     @Override
     public String toString() {
-        return "User{" +
+        return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + age +
                 '}';
     }
 
     /**
      * 建造者
      */
-    public static User.Builder builder() {
-        return new User.Builder();
+    public static Product.Builder builder() {
+        return new Product.Builder();
     }
 
     /**
@@ -61,35 +50,29 @@ public class User {
      */
     private static class Builder {
 
-        private User user = new User();
+        private final Product product = new Product();
 
-        public User.Builder id(Long id) {
-            user.setId(id);
+        public Product.Builder id(Long id) {
+            product.setId(id);
             return this;
         }
 
-        public User.Builder name(String name) {
-            user.setName(name);
+        public Product.Builder name(String name) {
+            product.setName(name);
             return this;
         }
 
-        public User.Builder age(Integer age) {
-            user.setAge(age);
-            return this;
-        }
-
-        public User build() {
-            return this.user;
+        public Product build() {
+            return this.product;
         }
 
     }
 
     public static void main(String[] args) {
-        User user = User.builder()
+        Product product = Product.builder()
                 .id(1L)
-                .name("Tom")
-                .age(18)
+                .name("iPhone")
                 .build();
-        System.out.println(user);
+        System.out.println(product);
     }
 }
