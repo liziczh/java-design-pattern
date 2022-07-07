@@ -11,7 +11,14 @@ package com.liziczh.designpattern.structural.proxy.jdkproxy;
 public class Target implements ITarget {
 
     @Override
-    public void doSomething(String str) {
-        System.out.println("Target do something... str=" + str);
+    public void doSomething() {
+        System.out.println("Target do something...");
     }
+
+    public static void main(String[] args) {
+        JdkProxy proxy = new JdkProxy(new Target());
+        ITarget target = (ITarget) proxy.getInstance();
+        target.doSomething();
+    }
+
 }

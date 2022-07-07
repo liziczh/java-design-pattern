@@ -10,5 +10,5 @@ package com.liziczh.designpattern.structural.proxy.jdkproxy;
  */
 public interface ITarget {
 
-    void doSomething(String str);
+    void doSomething();
 }
