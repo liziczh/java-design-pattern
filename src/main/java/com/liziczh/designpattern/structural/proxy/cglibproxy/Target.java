@@ -15,8 +15,8 @@ public class Target {
     }
 
     public static void main(String[] args) {
-        CglibProxy proxy = new CglibProxy();
-        Target target = (Target) proxy.getInstance(Target.class);
+        CglibProxyHandler proxyHandler = new CglibProxyHandler();
+        Target target = (Target) proxyHandler.getProxy(Target.class);
         target.doSomething("math");
     }
 }

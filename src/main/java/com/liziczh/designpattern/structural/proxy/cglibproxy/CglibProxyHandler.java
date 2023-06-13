@@ -14,33 +14,25 @@ import org.springframework.cglib.proxy.MethodProxy;
  * @description
  * @date 2022/7/7 5:33 PM
  */
-public class CglibProxy implements MethodInterceptor {
+public class CglibProxyHandler implements MethodInterceptor {
 
-    public Object getInstance(Class<?> clazz) {
+    public Object getProxy(Class<?> clazz) {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(clazz);
-        enhancer.setCallback(new CglibProxy());
+        enhancer.setCallback(new CglibProxyHandler());
         return enhancer.create();
     }
 
     @Override
     public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
 
-        doBefore();
+        System.out.println("Proxy doBefore...");
 
         Object result = methodProxy.invokeSuper(o, args);
 
-        doAfter();
+        System.out.println("Proxy doAfter...");
 
         return result;
-    }
-
-    public void doBefore() {
-        System.out.println("Proxy doBefore...");
-    }
-
-    public void doAfter() {
-        System.out.println("Proxy doAfter...");
     }
 
 }
