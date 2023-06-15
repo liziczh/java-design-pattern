@@ -1,4 +1,4 @@
-package com.liziczh.designpattern.structural.proxy.jdkproxy;
+package com.liziczh.designpattern.structural.proxy;
 
 /**
  * common
@@ -10,5 +10,5 @@ package com.liziczh.designpattern.structural.proxy.jdkproxy;
  */
 public interface ITarget {
 
-    void doSomething();
+    void doSomething(String name);
 }
